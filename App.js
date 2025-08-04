@@ -3,7 +3,7 @@ import {SafeAreaView, Text, StyleSheet} from 'react-native';
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>Привет, React Native ! 👋</Text>
+      <Text style={styles.text}>Привет, меня зовут Айганым ! 👋</Text>
     </SafeAreaView>
   );
 };
