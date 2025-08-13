@@ -1,12 +1,10 @@
-import {SafeAreaView, View, Text, StyleSheet, Image } from 'react-native';
-import { TextInput } from 'react-native';
 import Categories from './components/Categories';
-
-
+import Homescreen from './components/Homescreen';
 
 export default function App() {
   return (
     <Categories />
   );
 };
+
 

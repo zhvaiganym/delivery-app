@@ -1,4 +1,4 @@
-import {SafeAreaView, View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import { TextInput } from 'react-native';
 
 
@@ -8,7 +8,7 @@ export default function Categories() {
         <Image source={require('../assets/arrow.png')} style={{ width: 23, height: 23, marginVertical: 25, marginLeft: 10 }} />
         <Text style={styles.text}>Categories</Text>
       
-      <View style={styles.container}>
+       <View style={styles.container}>
        <Image
         source={require('../assets/search.png')}
         style={styles.icon}
