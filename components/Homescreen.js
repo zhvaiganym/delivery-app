@@ -1,5 +1,4 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import Categories from './Categories';
 import { Button } from 'react-native';
 
 

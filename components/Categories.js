@@ -1,12 +1,15 @@
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView  } from 'react-native';
 import { TextInput } from 'react-native';
 
 
 export default function Categories() {
   return (
-    <View style={{flex: 1, backgroundColor: '#eae6ee'}}>
-        <Image source={require('../assets/arrow.png')} style={{ width: 23, height: 23, marginVertical: 25, marginLeft: 10 }} />
-        <Text style={styles.text}>Categories</Text>
+    <ScrollView style={{flex: 1, backgroundColor: '#eae6ee'}}>
+       <View style={{width: '100%', height: 90 }}>
+       <Image source={require('../assets/vector.png')} style={{ width: 8, height: 12, marginTop: 62, marginLeft: 21 }} />
+       </View>
+
+       <Text style={styles.text}>Categories</Text>
       
        <View style={styles.container}>
        <Image
@@ -17,84 +20,118 @@ export default function Categories() {
         style={styles.input}
         placeholder="Search"
       />
-     </View>
+      </View>
 
-      <View style={{flex: 1, flexDirection: 'column'}}>
+      <View style={{flex: 1, flexDirection: 'column', gap: 20 }}>
         
-        <View style={{flexDirection: 'row', gap: 20, justifyContent: 'center', marginTop: 20}}>
-        <View style={styles.box}>
-          <Image source={require('../assets/vegetables.jpeg')} style={{ width: '100%', height: 120, resizeMode: 'cover' }} />
-          <Text style={{marginLeft: 10, fontFamily: 'Roboto', fontWeight: '700', fontSize: 18, color: '#2d0c57'}}>Vegetables</Text>
-          <Text style={{marginLeft: 10, marginBottom: 10}}>(43)</Text>
-        </View>
+        <View style={{flexDirection: 'row', gap: 20, justifyContent: 'center' }}>
+        
+         <View style={styles.box}>
+          <Image source={require('../assets/vegetables.png')} style={{ width: '100%', height: 130, resizeMode: 'cover' }} />
+          <Text style={{marginLeft: 15, marginVertical: 10, fontFamily: 'Roboto', fontWeight: '700', fontSize: 18, color: '#2d0c57'}}>Vegetables</Text>
+          <Text style={{marginLeft: 15, marginBottom: 17, fontFamily: 'Roboto', fontWeight: '400', fontSize: 13, color: '#9586a8' }}>(43)</Text>
+         </View>
 
         <View style={styles.box}>
-
-        </View>
-        </View>
-
-        <View style={{flexDirection: 'row', gap: 20, justifyContent: 'center', marginTop: 20}}>
-        <View style={styles.box}>
-
-        </View>
-
-        <View style={styles.box}>
-
-        </View>
-        </View>
-
+          <Image source={require('../assets/fruits.png')} style={{ width: '100%', height: 130, resizeMode: 'cover' }} />
+          <Text style={{marginLeft: 15, marginVertical: 10, fontFamily: 'Roboto', fontWeight: '700', fontSize: 18, color: '#2d0c57'}}>Fruits</Text>
+          <Text style={{marginLeft: 15, marginBottom: 17, fontFamily: 'Roboto', fontWeight: '400', fontSize: 13, color: '#9586a8' }}>(32)</Text>
+         </View>
 
       </View>
 
 
+        <View style={{flexDirection: 'row', gap: 20, justifyContent: 'center' }}>
+        
+         <View style={styles.box}>
+          <Image source={require('../assets/bread.png')} style={{ width: '100%', height: 130, resizeMode: 'cover' }} />
+          <Text style={{marginLeft: 15, marginVertical: 10, fontFamily: 'Roboto', fontWeight: '700', fontSize: 18, color: '#2d0c57'}}>Bread</Text>
+          <Text style={{marginLeft: 15, marginBottom: 17, fontFamily: 'Roboto', fontWeight: '400', fontSize: 13, color: '#9586a8' }}>(22)</Text>
+         </View>
+
+        <View style={styles.box}>
+          <Image source={require('../assets/sweets.png')} style={{ width: '100%', height: 130, resizeMode: 'cover' }} />
+          <Text style={{marginLeft: 15, marginVertical: 10, fontFamily: 'Roboto', fontWeight: '700', fontSize: 18, color: '#2d0c57'}}>Sweets</Text>
+          <Text style={{marginLeft: 15, marginBottom: 17, fontFamily: 'Roboto', fontWeight: '400', fontSize: 13, color: '#9586a8' }}>(56)</Text>
+         </View>
+
+      </View>
+
+
+      <View style={{flexDirection: 'row', gap: 20, justifyContent: 'center' }}>
+        
+         <View style={styles.box}>
+          <Image source={require('../assets/pasta.png')} style={{ width: '100%', height: 130, resizeMode: 'cover' }} />
+          <Text style={{marginLeft: 15, marginVertical: 10, fontFamily: 'Roboto', fontWeight: '700', fontSize: 18, color: '#2d0c57'}}>Pasta</Text>
+          <Text style={{marginLeft: 15, marginBottom: 17, fontFamily: 'Roboto', fontWeight: '400', fontSize: 13, color: '#9586a8' }}>(43)</Text>
+         </View>
+
+        <View style={styles.box}>
+          <Image source={require('../assets/drinks.png')} style={{ width: '100%', height: 130, resizeMode: 'cover' }} />
+          <Text style={{marginLeft: 15, marginVertical: 10, fontFamily: 'Roboto', fontWeight: '700', fontSize: 18, color: '#2d0c57'}}>Drinks</Text>
+          <Text style={{marginLeft: 15, marginBottom: 17, fontFamily: 'Roboto', fontWeight: '400', fontSize: 13, color: '#9586a8' }}>(43)</Text>
+         </View>
+
+      </View>
+
+   </View>
 
 
 
 
-    </View>
+
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    width: '90%',
-    marginLeft: 15,
-    backgroundColor: '#efebf5',
+    width: 357,
     height: 45,
+    marginLeft: 20,
+    marginBottom: 40,
+    backgroundColor: '#f6f5f5',
     flexDirection: 'row',
     alignItems: 'center',
-    borderWidth: 1,
-    borderColor: '#b0a1c2',
+    borderWidth: 0.5,
+    borderColor: '#9586a8',
     borderRadius: 25,
     paddingHorizontal: 8,
+    gap: 12,
   },
   icon: {
-    width: 23,
-    height: 23,
-    marginRight: 8,
-    marginLeft: 5
+    width: 24,
+    height: 24,
+    marginLeft: 10,
   },
   input: {
-    flex: 1,
-    height: 40,
-    fontSize: 16,
-    color: '#44246c',
+    fontSize: 17,
+    lineHeight: 22,
+    letterSpacing: -0.41,
+    fontFamily: 'SF Pro Text',
+    fontWeight: '400',
+    color: '#9586a8',
   },
   text: {
+    width: 174,
+    height: 41,
     fontSize: 30, 
-    fontWeight: "bold", 
+    lineHeight: 41,
+    letterSpacing: 0.41,
+    fontFamily: 'SF Pro Display',
+    fontWeight: '700', 
     marginBottom: 20,
-    marginLeft: 15,
-    color: "#44246c",
+    marginLeft: 20,
+    color: '#2d0c57',
   },
   box: {
     flexDirection: 'column',
-    gap: 10,
     width: 170,
+    height: 210,
     backgroundColor: '#f0f0f0',
     borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#b0a1c2',
-    borderRadius: 10,
+    borderWidth: 0.5,
+    borderColor: '#9586a8',
+    borderRadius: 8,
   }
 });
