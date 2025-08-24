@@ -3,18 +3,23 @@ import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
 import HomeScreen from './components/Homescreen.js';
 import Categories from './components/Categories.js';
+import Vegetables from './components/Vegetables.js';
+import Item from './components/Item.js';
+
+
 
 
 export default function App() {
-  const [currentScreen, setCurrentScreen] = useState('home');
+/*  const [currentScreen, setCurrentScreen] = useState('home');
 
   const renderScreen = () => {
     if (currentScreen === 'home') return <HomeScreen />;
     if (currentScreen === 'categories') return <Categories />;
-  };
+  };*/
 
   return (
-    <View style={{ flex: 1 }}>
+    <Item />
+    /*<View style={{ flex: 1 }}>
       {renderScreen()}
 
 
@@ -28,11 +33,11 @@ export default function App() {
         </TouchableOpacity>
 
       </View>
-    </View>
+    </View>*/
   );
-}
+};
 
-const styles = StyleSheet.create({
+/*const styles = StyleSheet.create({
   menu: {
     height: 80,
     flexDirection: 'row',
@@ -50,4 +55,4 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: 'gray',
   },
-});
+});*/
