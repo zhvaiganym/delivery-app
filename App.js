@@ -5,6 +5,8 @@ import HomeScreen from './components/Homescreen.js';
 import Categories from './components/Categories.js';
 import Vegetables from './components/Vegetables.js';
 import Item from './components/Item.js';
+import Checkout from './components/Checkout.js';
+import Payment from './components/Payment.js';
 
 
 
@@ -18,7 +20,7 @@ export default function App() {
   };*/
 
   return (
-    <Item />
+    <Payment />
     /*<View style={{ flex: 1 }}>
       {renderScreen()}
 
