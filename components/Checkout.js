@@ -1,9 +1,9 @@
-import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native';
 
 
-export default function Checkout() {
+export default function Checkout({ goToPayment }) {
   return (
-    <ScrollView style={{flex: 1, backgroundColor: '#F6F5F5'}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#F6F5F5'}}>
      <View style={{backgroundColor: '#ffffff', width: '100%', height: 95, boxShadow: '0px 0.5px 4px rgba(0, 0, 0, 0.2)', flexDirection: 'row'}}>
        <Image source={require('../assets/vector.png')} style={{ width: 8, height: 12, marginTop: 62, marginLeft: 21 }} />
        <Text style={{fontSize: 17, lineHeight: 22, letterSpacing: -0.41, fontFamily: 'SF Pro Text', fontWeight: '600',  marginBottom: 16, marginHorizontal: 129, marginTop: 57, color: '#2d0c57'}}>Checkout</Text>
@@ -12,7 +12,7 @@ export default function Checkout() {
 
      <View style={{flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: 20, marginTop: 24 }}>
         <Text style={{fontSize: 22, lineHeight: 22, letterSpacing: -0.41, fontFamily: 'SF Pro Text', fontWeight: '700', color: '#2d0c57'}}>Payment method</Text>
-        <TouchableOpacity activeOpacity={0.5}>
+        <TouchableOpacity activeOpacity={0.5} onPress={ goToPayment }>
          <Text style={{fontSize: 15, color: '#7203FF', fontFamily: 'SF Pro Text', fontWeight: '600', lineHeight: 18, letterSpacing: -0.01}}>CHANGE</Text>
         </TouchableOpacity>
      </View>
@@ -81,7 +81,7 @@ export default function Checkout() {
 
 
 
-    </ScrollView>
+    </SafeAreaView>
   );
 };
 

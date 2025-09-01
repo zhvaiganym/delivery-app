@@ -1,13 +1,13 @@
-import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native';
 import { TextInput } from 'react-native';
 
 
-export default function Vegetables() {
+export default function Vegetables({ goBack, goToItem }) {
   return (
-    <ScrollView style={{flex: 1, backgroundColor: '#eae6ee'}}>
-       <View style={{width: '100%', height: 90}}>
-       <Image source={require('../assets/vector.png')} style={{ width: 8, height: 12, marginTop: 62, marginLeft: 21 }} />
-       </View>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#eae6ee'}}>
+       <TouchableOpacity onPress={goBack} style={{width: '100%', height: 90}}>
+        <Image source={require('../assets/vector.png')} style={{ width: 8, height: 12, marginTop: 62, marginLeft: 21 }} />
+      </TouchableOpacity>
 
        <Text style={styles.text}>Vegetables</Text>
       
@@ -38,8 +38,12 @@ export default function Vegetables() {
       </View>
 
 
+
+      <ScrollView style={{flex:1}}>
       <View style={styles.container2}>
+        <TouchableOpacity onPress={ goToItem }>
         <Image source={require('../assets/lettuce.png')} style={{ width: 177, height: 128, resizeMode: 'cover', borderRadius: 8 }} />
+        </TouchableOpacity>
         <View style={{flexDirection: 'column', gap: 8, marginTop: 10 }}>
             <Text style={{fontSize: 18, fontFamily: 'SF Pro Text', fontWeight: '600', color: '#2d0c57', lineHeight: 22, letterSpacing: -0.41}}>Boston Lettuce</Text>
             <Text style={{fontSize: 22, fontFamily: 'SF Pro Text', fontWeight: '700', color: '#2d0c57', lineHeight: 22, letterSpacing: -0.41}}>1.10 <Text style={{fontSize: 16, fontFamily: 'SF Pro Text', fontWeight: 400, color: '#9586a8', lineHeight: 22, letterSpacing: -0.41 }}>€ / piece</Text> </Text>
@@ -89,12 +93,12 @@ export default function Vegetables() {
         </View>
       </View>
 
+
+
       
 
-
-
-
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 

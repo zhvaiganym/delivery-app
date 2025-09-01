@@ -1,12 +1,12 @@
-import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView, SafeAreaView, TouchableOpacity, TextInput } from 'react-native';
 
 
-export default function Checkout() {
+export default function Payment({ goBack }) {
   return (
-    <ScrollView style={{flex: 1, backgroundColor: '#F6F5F5'}}>
-     <View style={{backgroundColor: '#F6F5F5', width: '100%', height: 95, flexDirection: 'row'}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#F6F5F5'}}>
+     <TouchableOpacity onPress={ goBack } style={{backgroundColor: '#F6F5F5', width: '100%', height: 95, flexDirection: 'row'}}>
        <Image source={require('../assets/vector.png')} style={{ width: 8, height: 12, marginTop: 62, marginLeft: 21 }} />
-     </View>
+     </TouchableOpacity>
 
      <Text style={{fontSize: 30, lineHeight: 41, letterSpacing: 0.41, fontFamily: 'SF Pro Display', fontWeight: '700', color: '#2d0c57', marginLeft: 20, marginBottom: 20}}>Credit / Debit card</Text>
      <Image source={require('../assets/visa.png')} style={{width: 410, height: 265}}/>
@@ -50,7 +50,7 @@ export default function Checkout() {
 
 
 
-    </ScrollView>
+    </SafeAreaView>
   );
 };
 

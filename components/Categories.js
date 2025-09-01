@@ -1,13 +1,16 @@
-import { View, Text, StyleSheet, Image, ScrollView  } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView, SafeAreaView, TouchableOpacity  } from 'react-native';
 import { TextInput } from 'react-native';
 
 
-export default function Categories() {
+export default function Categories({ goHome, goToVegetables }) {
   return (
-    <ScrollView style={{flex: 1, backgroundColor: '#eae6ee'}}>
-       <View style={{width: '100%', height: 90 }}>
-       <Image source={require('../assets/vector.png')} style={{ width: 8, height: 12, marginTop: 62, marginLeft: 21 }} />
-       </View>
+    <SafeAreaView style={{backgroundColor: '#eae6ee', flex: 1}}>
+       <TouchableOpacity onPress={goHome} style={{width: '100%', height: 90 }}>
+        <Image
+          source={require('../assets/vector.png')}
+          style={{ width: 8, height: 12, marginTop: 62, marginLeft: 21 }}
+        />
+      </TouchableOpacity>
 
        <Text style={styles.text}>Categories</Text>
       
@@ -22,15 +25,18 @@ export default function Categories() {
       />
       </View>
 
-      <View style={{flex: 1, flexDirection: 'column', gap: 20 }}>
+      <ScrollView style={{flex:1}}>
+      <View style={{flexDirection: 'column', gap: 20 }}>
         
         <View style={{flexDirection: 'row', gap: 20, justifyContent: 'center' }}>
         
+         <TouchableOpacity onPress={goToVegetables}>
          <View style={styles.box}>
           <Image source={require('../assets/vegetables.png')} style={{ width: '100%', height: 130, resizeMode: 'cover' }} />
           <Text style={{marginLeft: 15, marginVertical: 10, fontFamily: 'Roboto', fontWeight: '700', fontSize: 18, color: '#2d0c57'}}>Vegetables</Text>
           <Text style={{marginLeft: 15, marginBottom: 17, fontFamily: 'Roboto', fontWeight: '400', fontSize: 13, color: '#9586a8' }}>(43)</Text>
          </View>
+         </TouchableOpacity>
 
         <View style={styles.box}>
           <Image source={require('../assets/fruits.png')} style={{ width: '100%', height: 130, resizeMode: 'cover' }} />
@@ -74,13 +80,13 @@ export default function Categories() {
 
       </View>
 
-   </View>
+     </View>
+   </ScrollView>
 
 
 
 
-
-    </ScrollView>
+    </SafeAreaView>
   );
 };
 

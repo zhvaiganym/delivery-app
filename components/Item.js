@@ -2,10 +2,12 @@ import { View, SafeAreaView, Text, StyleSheet, Image, TouchableOpacity, ImageBac
 
 
 
-export default function Item() {
+export default function Item({ goBack }) {
   return (
     <SafeAreaView>
+      <TouchableOpacity onPress={ goBack}>
       <ImageBackground source={require('../assets/green.png')} style={{width: '100%', height: 358 }}>
+
       <View style={styles.container}>
         <Text style={{fontSize: 28, lineHeight: 41, letterSpacing: 0.41, fontFamily: 'SF Pro Display', fontWeight: '700',  marginBottom: 16, marginLeft: 20, marginTop: 30, color: '#2d0c57'}}>Boston Lettuce</Text>
         <Text style={{width: 150, height: 40, fontSize: 30, fontFamily: 'SF Pro Text', fontWeight: '700', color: '#2d0c57', lineHeight: 22, letterSpacing: -0.41, marginLeft: 20}}>1.10 <Text style={{fontSize: 22, fontFamily: 'SF Pro Text', fontWeight: 400, color: '#9586a8', lineHeight: 22, letterSpacing: -0.41 }}>€ / piece</Text> </Text>
@@ -23,7 +25,9 @@ export default function Item() {
           </TouchableOpacity>
         </View>
       </View>
+
       </ImageBackground>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };
